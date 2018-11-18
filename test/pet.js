@@ -55,7 +55,7 @@ describe('Pets', () => {
                     done();
                 });
         });
-        it('it should not POST a book without status field', (done) => {
+        it('it should not POST a pet without status field', (done) => {
             let pet = {
                 name: "Bug"
             };
