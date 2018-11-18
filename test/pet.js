@@ -18,13 +18,13 @@ describe('Pets', () => {
      * Test the /GET route
      */
     describe('/GET pets', () => {
-        it('it should GET all the pets', (done) => {
+        it('The number of pets should be 9', (done) => {
             chai.request(server)
                 .get('/pets')
                 .end((err, res) => {
                     res.should.have.status(200);
                     res.body.should.be.a('array');
-                    res.body.length.should.be.eql(9); // fixme :)
+                    res.body.length.should.be.eql(9);
                     done();
                 });
         });
@@ -72,8 +72,7 @@ describe('Pets', () => {
      * Test the /GET/:id route
      */
     describe('/GET/:id pets', () => {
-        it('it should GET a pet by the given id', (done) => {
-            // TODO add a model to db then get that id to take this test
+        it('it should GET the pet with id = 1', (done) => {
             let id = 1;
             chai.request(server)
                 .get('/pets/' + id)
@@ -93,9 +92,8 @@ describe('Pets', () => {
      * Test the /PUT/:id route
      */
     describe('/PUT/:id pets', () => {
-        it('it should UPDATE a pet given the id', (done) => {
-            // TODO add a model to db then get that id to take this test
-            let id = 1;
+        it('it should UPDATE the pet with id = 2', (done) => {
+            let id = 2;
             chai.request(server)
                 .put('/pets/' + id)
                 .send({
@@ -117,9 +115,8 @@ describe('Pets', () => {
      * Test the /DELETE/:id route
      */
     describe('/DELETE/:id pets', () => {
-        it('it should DELETE a pet given the id', (done) => {
-            // TODO add a model to db then get that id to take this test
-            let id = 1;
+        it('it should DELETE the pet with id = 3', (done) => {
+            let id = 3;
             chai.request(server)
                 .delete('/pets/' + id)
                 .end((err, res) => {

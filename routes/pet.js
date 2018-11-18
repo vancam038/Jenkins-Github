@@ -6,7 +6,7 @@ let Pet = require("../model/pet");
 let getPets = (req, res) => {
     Pet.find((err, pets) => {
         if (err) {
-            res.send(err); // :D
+            res.send(err);
             return;
         }
         res.send(pets);
@@ -31,7 +31,7 @@ let postPet = (req, res) => {
 };
 
 /*
- * GET /pets/:id route to retrieve a pet given its id.
+ * GET /pets/:id route to retrieve the pet with given id
  */
 let getPet = (req, res) => {
     Pet.findById(req.params.id, (err, pet) => {
@@ -46,7 +46,7 @@ let getPet = (req, res) => {
 };
 
 /*
- * DELETE /pets/:id to delete a pet given its id.
+ * DELETE /pets/:id to delete the pet with given id
  */
 let deletePet = (req, res) => {
     Pet.delete(req.params.id, (err, result) => {
@@ -58,7 +58,7 @@ let deletePet = (req, res) => {
 };
 
 /*
- * PUT /pets/:id to update a pet given its id
+ * PUT /pets/:id to update the pet with given id
  */
 let updatePet = (req, res) => {
     Pet.update(req.params.id, req.body, (err, pet) => {
