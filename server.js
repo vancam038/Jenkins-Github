@@ -1,6 +1,3 @@
-/**
- * Created by hoangdv on 0028, Jun, 28, 2017.
- */
 let express = require('express');
 let app = express();
 let morgan = require('morgan');

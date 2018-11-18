@@ -1,6 +1,3 @@
-/**
- * Created by hoangdv on 0029, Jun, 29, 2017.
- */
 let Pet = require("../model/pet");
 
 /*

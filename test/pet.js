@@ -1,6 +1,3 @@
-/**
- * Created by hoangdv on 0029, Jun, 29, 2017.
- */
 //During the test the env variable is set to test
 process.env.NODE_ENV = 'test';
 
